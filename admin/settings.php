@@ -55,7 +55,7 @@ function sorp_render_form() { ?>
 						</th>
 
 						<td>
-							<textarea name="sorp_options[sorp_styling]" type="text" id="sorp-styling" class="text-area" rows="10" cols="70"><?php echo $options['sorp_styling']; ?></textarea>
+							<textarea name="sorp_options[sorp_styling]" type="text" id="sorp-styling" class="text-area" rows="10" cols="70"><?php echo isset( $options['sorp_styling'] ) ? esc_html( $options['sorp_styling'] ) : ''; ?></textarea>
 							<p class="description">
 								<?php 
 									printf( __( 'The output of the SO Related Posts plugin comes with the following classes that you can adjust to your heart\'s content. %s', 'so-related-posts' ),
@@ -82,7 +82,7 @@ function sorp_render_form() { ?>
 							</p>
 							
 							<input type="hidden" name="action" value="update" />
-							<input type="hidden" name="page_options" value="<?php echo $options['sorp_styling']; ?>" />
+							<input type="hidden" name="page_options" value="<?php echo isset( $options['sorp_styling'] ) ? esc_html( $options['sorp_styling'] ) : ''; ?>" />
 						</td>
 					</tr>
 
